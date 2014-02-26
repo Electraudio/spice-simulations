@@ -1,0 +1,19 @@
+* C:\Users\Kim\Documents\GitHub\spice-simulations\425-440.asc
+V§Signal N001 0 SINE(0 2 10meg) Rser=50
+L2 0 N004 225µ
+L1 0 N003 225µ
+V§BC_Hydro N005 0 SINE(0 10 60) Rser=50
+C2 N005 N004 50n V=250
+L3 0 N008 225µ
+L4 0 N007 225µ
+C1 N005 N008 50n
+R§Scope 0 N006 1meg
+R1 N002 N001 100
+C3 N003 N002 50n
+R§load N006 0 2.66k
+C4 N007 N006 50n
+.tran 0 0.0001 0
+K1 L1 L2 1
+K2 L3 L4 1
+.backanno
+.end
